@@ -1,0 +1,15 @@
+# Render Blueprint — deploy the API as a free Web Service.
+# After pushing to GitHub: connect the repo in Render and use "Apply" to create the service.
+# The service URL will be like https://precycle-api-xxxx.onrender.com
+
+services:
+  - type: web
+    name: precycle-api
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Optional: add OPENAI_API_KEY in Render dashboard for AI recommendations
