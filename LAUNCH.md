@@ -130,3 +130,4 @@ Share this link; anyone can open the app in the browser. The API runs on Render 
   - Render’s free tier spins down when idle. The first request after that can take 30–60 seconds; later requests are fast.
 
 For more detail, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
