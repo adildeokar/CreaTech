@@ -26,10 +26,11 @@ function showError(err: unknown) {
 
 try {
   const root = createRoot(rootEl)
+  const basename = typeof import.meta.env.BASE_URL === 'string' ? import.meta.env.BASE_URL : '/'
   root.render(
     <StrictMode>
       <ErrorBoundary>
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
           <App />
         </BrowserRouter>
       </ErrorBoundary>
